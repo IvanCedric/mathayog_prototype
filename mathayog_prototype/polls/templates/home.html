@@ -1,13 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for q in questions %}
-        <article class="media content-section">
-          <div class="media-body">
-            <div class="article-metadata">
-              <a class="mr-2" href="#">{{ q.pub_date }}</a>
-            </div>
-            <h2><a class="article-title" href="#">{{ q.question_text }}</a></h2>
-          </div>
-        </article>
-    {% endfor %}
+    <div class="container">
+      <h4>Drag the percentages below to match the corresponding brackets</h4>
+      <div class="empty">
+        <div class="fill" draggable="true"></div>
+      </div>
+      <div class="empty">
+        <div class="fill" draggable="true"></div>
+      </div>
+      <div class="empty">
+        <div class="fill2" draggable="true"></div>
+      </div>
+      <div class="bar1" draggable="false"></div>
+      <div class="container">
+        <div class="empty"></div>
+        <div class="empty"></div>
+      </div>
+      <div class="bar2" draggable="false"></div>
+      <div class="empty"></div>
+    </div>
 {% endblock content %}
