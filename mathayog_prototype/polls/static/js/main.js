@@ -1,10 +1,12 @@
-const fill = document.querySelector('.fill');
+const fill = document.querySelectorAll('.fill');
 const empties = document.querySelectorAll('.empty');
-
 // Fill listeners
-fill.addEventListener('dragstart', dragStart);
-fill.addEventListener('dragend', dragEnd);
-asdasdasd
+for (const fil of fill){
+
+  fil.addEventListener('dragstart', dragStart);
+  fil.addEventListener('dragend', dragEnd);
+}
+
 
 // Loop through empty boxes and add listeners
 for (const empty of empties) {
@@ -16,14 +18,20 @@ for (const empty of empties) {
 
 // Drag Functions
 
-function dragStart() {
+function dragStart(e) {
   this.className += ' hold';
-  setTimeout(() => (this.className = 'invisible'), 0);
+  e.dataTransfer.setData('text/plain', e.target.id);
+  console.log("asdasd");
+  //setTimeout(() => (this.className = 'invisible'), 0);
 }
 
-function dragEnd() {
+
+function dragEnd(e) {
   this.className = 'fill';
+  const id1 = e.dataTransfer.getData('text');
+  e.dataTransfer.clearData();
 }
+
 
 function dragOver(e) {
   e.preventDefault();
@@ -38,7 +46,9 @@ function dragLeave() {
   this.className = 'empty';
 }
 
-function dragDrop() {
+function dragDrop(e) {
   this.className = 'empty';
-  this.append(fill);
+  const id = e.dataTransfer.getData('text');
+  const draggableElement = document.getElementById(id);
+  this.append(draggableElement)
 }
