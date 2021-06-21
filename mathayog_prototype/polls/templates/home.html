@@ -1,5 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
+    <h1 id = "app">Sailing Ships</h1>
+    <div class="container" style="overflow: hidden;">
+      <div id="inner">
+        <div class="child">
+          <p>Ninety-five percent of world trade is moved by
+            sea, by roughly 50,000 tankers, bulk carriers
+            and container ships. Most of these ships use
+            diesel fuel.</br>
+            Engineers are planning to develop wind
+            power support for ships. Their proposal is to
+            attach kite sails to ships and use the wind’s
+            power to help reduce diesel consumption and
+            the fuel’s impact on the environment.</p>
+        </div>
+        {% load static %}
+        <img draggable="true" src="{% static 'img/skysails.PNG' %}"/>
+        <!--<div class="child" id="sail" draggable="false"></div>-->
+      </div>
+    </div>
     <div class="container">
       <h4>Drag the percentages below to match the corresponding brackets</h4>
       <div class="empty">

@@ -70,6 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mathayog_prototype.wsgi.application'
+ASGI_APPLICATION = 'mathayog_prototype.asgi.application'
 
 
 # Database
