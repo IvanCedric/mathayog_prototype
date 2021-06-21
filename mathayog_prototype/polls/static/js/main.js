@@ -4,6 +4,7 @@ const empties = document.querySelectorAll('.empty');
 // Fill listeners
 fill.addEventListener('dragstart', dragStart);
 fill.addEventListener('dragend', dragEnd);
+asdasdasd
 
 // Loop through empty boxes and add listeners
 for (const empty of empties) {

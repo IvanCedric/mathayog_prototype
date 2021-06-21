@@ -91,6 +91,13 @@ a.article-title:hover {
   width: 75px;
   cursor: pointer;
 }
+.fill1{
+  background-image: url("/static/img/100percent.PNG");
+  position: relative;
+  height: 40px;
+  width: 75px;
+  cursor: pointer;
+}
 
 .bar1{
   background-image: url("/static/img/bar1.PNG");
