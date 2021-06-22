@@ -21,7 +21,6 @@ for (const empty of empties) {
 function dragStart(e) {
   this.className += ' hold';
   e.dataTransfer.setData('text/plain', e.target.id);
-  console.log("asdasd");
   //setTimeout(() => (this.className = 'invisible'), 0);
 }
 
@@ -52,3 +51,11 @@ function dragDrop(e) {
   const draggableElement = document.getElementById(id);
   this.append(draggableElement)
 }
+
+/*var socket = new WebSocket('ws://localhost:8000/ws/some_url');
+
+  socket.onmmessage = function(e){
+  var data = JSON.parse(e.data);
+  console.log(data);
+  document.querySelector('#app').innerText = data.message;
+}*/

@@ -11,6 +11,17 @@ import os
 
 from django.core.asgi import get_asgi_application
 
+from channels.auth  import AuthMiddlewareStack
+from channels.routing import ProtocolTypeRouter
+from channels.routing import URLRouter
+
+from polls.routing import ws_urlpatterns
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mathayog_prototype.settings')
 
-application = get_asgi_application()
+application = ProtocolTypeRouter({
+    'http' : get_asgi_application(),
+    'websocket': AuthMiddlewareStack(URLRouter(ws_urlpatterns))
+})
+
+#application = get_asgi_application()

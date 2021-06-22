@@ -115,6 +115,12 @@ a.article-title:hover {
   cursor: pointer; 
 }
 
+#sail{
+  background-image: url("/static/img/skysails.PNG");
+  max-width: 100%;
+  height:auto;
+  cursor: pointer; 
+}
 .hold {
   border: solid 5px #ccc;
 }
@@ -131,4 +137,15 @@ a.article-title:hover {
 .hovered {
   background: #f4f4f4;
   border-style: dashed;
+}
+
+#inner {
+  overflow: hidden;
+  width: 2000px;
+}
+
+.child {
+  float: left;
+  width: 325px;
+  height: 300px;
 }

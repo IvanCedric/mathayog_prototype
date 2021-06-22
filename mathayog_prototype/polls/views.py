@@ -30,7 +30,8 @@ followups = [
 def index(request):
     context = {
         "questions": Question.objects.all(),
-        "title": "Home"
+        "title": "Home",
+        'text' : 'Hollo World'
     }
     return render(request, "home.html", context)
 
