@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <div class="container">
   <h3>
 <!--    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis, lectus sit amet aliquam dignissim,-->
@@ -9,7 +10,7 @@
 <!--    mattis a. Nulla consectetur sem nec ornare viverra. Nam laoreet lorem at malesuada volutpat. Etiam sit amet-->
 <!--    accumsan lectus. In hac habitasse platea dictumst. Quisque vitae lectus enim.-->
 <!--    Integer feugiat ipsum vel nisl gravida sagittis-->
-    {{ intro }}
+      {{ intro }}
   </h3>
 
   {% load static %}
@@ -20,46 +21,43 @@
 <br>
 <br>
 
+<div class="container">
+  <h4>Drag the percentages below to match the corresponding brackets</h4>
+  <div class="empty">
+    <div  class="fill" id = "d3" draggable="true"></div>
+  </div>
+  <div class="empty">
+    <div class="fill" id = "d1"  draggable="true"></div>
+  </div>
+  <div class="empty">
+    <div class="fill" id = "d2" draggable="true"></div>
+  </div>
+  <div class="bar1" draggable="false"></div>
   <div class="container">
-    <h4>Drag the percentages below to match the corresponding brackets</h4>
-    <div class="empty">
-      <div  class="fill" id = "d3" draggable="true"></div>
-    </div>
-    <div class="empty">
-      <div class="fill" id = "d1"  draggable="true"></div>
-    </div>
-    <div class="empty">
-      <div class="fill" id = "d2" draggable="true"></div>
-    </div>
-    <div class="bar1" draggable="false"></div>
-    <div class="container">
-      <div class="empty"></div>
-      <div class="empty"></div>
-    </div>
-    <div class="bar2" draggable="false"></div>
+    <div class="empty"></div>
     <div class="empty"></div>
   </div>
+  <div class="bar2" draggable="false"></div>
+  <div class="empty"></div>
+</div>
+
 {% endblock content %}
 
 
 {% block sidebar %}
 
-<h3>Followup Questions</h3>
+    <h3>Teacher Feedback</h3>
     <p class='text-muted'>
 <!--      <ul class="list-group">-->
 <!--      </ul>-->
 
-        <form action="/action_page.php">
-          {% for f in followups %}
-          <label for="fname"> {{ f }} </label><br>
-          <input type="text" id="fname" name="fname" value=""><br>
-          {% endfor %}
-          <input type="submit" value="Submit">
-        </form>
+        {% for f in feedbacks %}
+            <input type="radio" id="male" name="gender" value="male">
+        <label for="male">{{ f }}</label><br>
+        {% endfor %}
 
-
-<!--        <button type="button" onclick="alert('Hello world!')">Confirm</button>-->
-<!--        <button type="button" onclick="alert('Hello world!')">Cancel</button>-->
+        <button type="button" onclick="alert('Hello world!')">Confirm</button>
+        <button type="button" onclick="alert('Hello world!')">Cancel</button>
     </p>
 
 {% endblock sidebar %}
