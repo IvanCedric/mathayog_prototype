@@ -3,11 +3,9 @@ from django.http import HttpResponse
 from .models import Question
 
 
-intro = """Ninety-five percent of world trade is moved by sea, by roughly 50 000 tankers, bulk carriers
-and container ships. Most of these ships use diesel fuel.
+intro = """One advantage of using a kite sail is that it flies at a height of 150m. There, the wind speed is approximately 25% higher than down on the deck of the ship.
 \n\n
-Engineers are planning to develop wind power support for ships. Their proposal is to attach kite sails to ships and use
-the wind's power to help reduce diesel consumption and the fuel's impact on the environment."""
+At what approximate speed does the wind blow into a kite sail when a wind speed of 24 km/h is measured on the deck of the ship?"""
 
 feedback = [
     "Vestibulum dignissim nibh eget felis vehicula pellentesque.",

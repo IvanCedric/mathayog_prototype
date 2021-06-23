@@ -1,25 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container">
-  <h3>
-<!--    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis, lectus sit amet aliquam dignissim,-->
-<!--    justo ante auctor felis, eget sagittis mi risus vel purus. Proin consequat ipsum et nunc iaculis, vitae rhoncus-->
-<!--    felis efficitur. Aenean efficitur neque et ornare mollis. Vivamus efficitur mollis quam, vel pellentesque diam-->
-<!--    mattis a. Nulla consectetur sem nec ornare viverra. Nam laoreet lorem at malesuada volutpat. Etiam sit amet-->
-<!--    accumsan lectus. In hac habitasse platea dictumst. Quisque vitae lectus enim.-->
-<!--    Integer feugiat ipsum vel nisl gravida sagittis-->
-    {{ intro }}
-  </h3>
 
-  {% load static %}
-  <img src="{% static '/img/mathayog_ship.png' %}" alt="Ship with a skysail">
-
-</div>
-
-<br>
-<br>
-
+<div class="student-main">
+  <div id="intro" style="border:1px solid black;">
+    <h3>
+      <!--    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis, lectus sit amet aliquam dignissim,-->
+      <!--    justo ante auctor felis, eget sagittis mi risus vel purus. Proin consequat ipsum et nunc iaculis, vitae rhoncus-->
+      <!--    felis efficitur. Aenean efficitur neque et ornare mollis. Vivamus efficitur mollis quam, vel pellentesque diam-->
+      <!--    mattis a. Nulla consectetur sem nec ornare viverra. Nam laoreet lorem at malesuada volutpat. Etiam sit amet-->
+      <!--    accumsan lectus. In hac habitasse platea dictumst. Quisque vitae lectus enim.-->
+      <!--    Integer feugiat ipsum vel nisl gravida sagittis-->
+          {{ intro }}
+        </h3>
+    {% load static %}
+    <!-- <img src="{% static '/img/skysails.png' %}" alt="Ship with a skysail"> -->
+  </div>
+  <div  id="read">
+    <img id="done1" src="{% static '/img/8.png' %}" alt="done" style="width:400px">
+  </div>
+  <div  id="ship-deck">
+    <h1>part where student highlights deck</h1>
+    <map name="myMap" id="myMap">
+      <area id="area1" shape="poly" coords="110,153,49,208,259,283,342,271,324,227" href="">
+      <area id="area2" shape="poly" coords="465,31,506,0,561,50" href="">
+     </map>
+    <img src="{% static '/img/4.png' %}" alt="done" style="width:600px" usemap="#myMap">
+  </div>
+  <div  id="bar-model">
+    <h1>part where student sail/deck</h1>
+  </div>
   <div class="container">
     <h4>Drag the percentages below to match the corresponding brackets</h4>
     <div class="empty">
@@ -39,27 +49,12 @@
     <div class="bar2" draggable="false"></div>
     <div class="empty"></div>
   </div>
+</div>
 {% endblock content %}
 
 
 {% block sidebar %}
 
-<h3>Followup Questions</h3>
-    <p class='text-muted'>
-<!--      <ul class="list-group">-->
-<!--      </ul>-->
-
-        <form action="/action_page.php">
-          {% for f in followups %}
-          <label for="fname"> {{ f }} </label><br>
-          <input type="text" id="fname" name="fname" value=""><br>
-          {% endfor %}
-          <input type="submit" value="Submit">
-        </form>
-
-
-<!--        <button type="button" onclick="alert('Hello world!')">Confirm</button>-->
-<!--        <button type="button" onclick="alert('Hello world!')">Cancel</button>-->
-    </p>
-
+<h3>Text bubble area</h3>
+<img src
 {% endblock sidebar %}

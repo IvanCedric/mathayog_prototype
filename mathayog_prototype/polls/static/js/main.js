@@ -1,5 +1,10 @@
 const fill = document.querySelectorAll('.fill');
 const empties = document.querySelectorAll('.empty');
+
+document.getElementById( "done1" ).onclick = function() {
+  // img clicked
+  console.log("done1 clicked")
+};
 // Fill listeners
 for (const fil of fill){
 
@@ -59,3 +64,21 @@ function dragDrop(e) {
   console.log(data);
   document.querySelector('#app').innerText = data.message;
 }*/
+
+/*code for area map of deck area*/
+$("#area1").on("click", function(e){
+  e.preventDefault();
+  console.log('deck clicked')
+  /*
+   your code here
+  */
+});
+
+$("#area2").on("click", function(e){
+  e.preventDefault();
+  console.log('sail clicked')
+  /*
+   your code here
+  */
+});
+

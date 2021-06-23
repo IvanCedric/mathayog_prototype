@@ -149,3 +149,10 @@ a.article-title:hover {
   width: 325px;
   height: 300px;
 }
+
+div.student-main
+{
+height:900px;
+overflow:scroll;
+float: left;
+}
