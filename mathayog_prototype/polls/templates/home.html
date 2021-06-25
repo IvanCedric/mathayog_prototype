@@ -1,47 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<<<<<<< HEAD
-=======
-<div class="container">
-  <h1>Question 1: SAILING SHIPS</h1>
-  <h3>
-    One advantage of using a kite sail is that it flies at a height of 150 m. There, the wind
-    speed is approximately 25% higher than down on the deck of the ship.
-    <br>
-    <br>
-    At what approximate speed does the wind blow into a kite sail when a wind speed of
-    24 km/h is measured on the deck of the ship?
-  </h3>
 
-  {% load static %}
-  <img src="{% static '/img/4.png' %}" alt="Ship with a skysail" style="height:100%;width:100%">
-
-</div>
-
-<br>
-<br>
->>>>>>> 3ccd55699b265fcc2858a04533605b6d5c12d7f8
-
-<div class="student-main">
-  <div id="intro" style="border:1px solid black;">
+<div class="student-main bg-white text-dark">
+  <div id="intro">
+    <h1>Question 1: SAILING SHIPS</h1>
     <h3>
-      <!--    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis, lectus sit amet aliquam dignissim,-->
-      <!--    justo ante auctor felis, eget sagittis mi risus vel purus. Proin consequat ipsum et nunc iaculis, vitae rhoncus-->
-      <!--    felis efficitur. Aenean efficitur neque et ornare mollis. Vivamus efficitur mollis quam, vel pellentesque diam-->
-      <!--    mattis a. Nulla consectetur sem nec ornare viverra. Nam laoreet lorem at malesuada volutpat. Etiam sit amet-->
-      <!--    accumsan lectus. In hac habitasse platea dictumst. Quisque vitae lectus enim.-->
-      <!--    Integer feugiat ipsum vel nisl gravida sagittis-->
-          {{ intro }}
-        </h3>
+      One advantage of using a kite sail is that it flies at a height of 150 m. There, the wind
+      speed is approximately 25% higher than down on the deck of the ship.
+      <br>
+      <br>
+      At what approximate speed does the wind blow into a kite sail when a wind speed of
+      24 km/h is measured on the deck of the ship?
+    </h3>
     {% load static %}
     <!-- <img src="{% static '/img/skysails.png' %}" alt="Ship with a skysail"> -->
+    <div  id="read">
+      <img id="done1" src="{% static '/img/8.png' %}" alt="done" style="width:400px">
+    </div>
   </div>
-  <div  id="read">
-    <img id="done1" src="{% static '/img/8.png' %}" alt="done" style="width:400px">
-  </div>
-  <div  id="ship-deck">
-    <h1>part where student highlights deck</h1>
+  <div  id="ship-deck" >
+    <h3>Step 1:</h3>
     <map name="myMap" id="myMap">
       <area id="area1" shape="poly" coords="110,153,49,208,259,283,342,271,324,227" href="">
       <area id="area2" shape="poly" coords="465,31,506,0,561,50" href="">
@@ -49,33 +28,94 @@
     <img src="{% static '/img/4.png' %}" alt="done" style="width:600px" usemap="#myMap">
   </div>
   <div  id="bar-model">
-    <h1>part where student sail/deck</h1>
-  </div>
-  <div class="container">
-    <h4>Drag the percentages below to match the corresponding brackets</h4>
-    <div class="empty">
-      <div  class="fill" id = "d3" draggable="true"></div>
+
+    <div id="percent">
+      <h4>Drag the percentages below to match the corresponding brackets</h4>
+      <div class="empty">
+        <div  class="fill" id = "d3" draggable="true"></div>
+      </div>
+      <div class="empty">
+        <div class="fill" id = "d1"  draggable="true"></div>
+      </div>
+      <div class="empty">
+        <div class="fill" id = "d2" draggable="true"></div>
+      </div>
     </div>
-    <div class="empty">
-      <div class="fill" id = "d1"  draggable="true"></div>
+
+    <!--bar model for sail-->
+    <div id="sail-deck" class="row bg-white text-dark">
+      <div class="column1">
+      </div>
+      <div class="column">
+          <form action="" method="get">
+            <br/>
+            <input  class="green_text" type="text" name="" value="" maxlength="100" />
+            <br />
+          </form>
+      </div>
+      <div class="column">
+        <div class="redbar1" draggable="false" style="width:270px"></div>
+      </div>
     </div>
-    <div class="empty">
-      <div class="fill" id = "d2" draggable="true"></div>
+
+    <div id="percent" class="row">
+      <div class="column">
+      </div>
+      <div class="column">
+        <div class="empty"></div>
+        <div class="empty"></div>
+      </div>
     </div>
-    <div class="bar1" draggable="false"></div>
-    <div class="container">
-      <div class="empty"></div>
-      <div class="empty"></div>
+
+
+    <!--bar model for deck-->
+    <div id="sail-deck" class="row bg-white text-dark">
+      <div class="column1">
+      </div>
+      <div class="column">
+          <form action="" method="get">
+            <br/>
+            <input  class="green_text" type="text" name="" value="" maxlength="100" />
+            <br />
+          </form>
+      </div>
+      <div class="column">
+        <div class="bluebar1" draggable="false" style="width:270px"></div>
+      </div>
     </div>
-    <div class="bar2" draggable="false"></div>
-    <div class="empty"></div>
+
+    
+    <div id="percent" class="row">
+      <div class="column">
+      </div>
+      <div class="column">
+        <div class="empty"></div>
+      </div>
+    </div>
+
+
   </div>
 </div>
 {% endblock content %}
 
 
 {% block sidebar %}
+<div >
+  <h3>Tutor response</h3>
+  <ul id="tutor-response-main">
+    <li  id="tp0-1"><img  src="{% static '/img/5.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp0-2"><img  src="{% static '/img/6.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp0-3"><img  src="{% static '/img/7.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp0-5"><img  src="{% static '/img/9.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp1-1"><img  src="{% static '/img/10.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp1-2"><img  src="{% static '/img/11.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp1-3"><img  src="{% static '/img/12.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp1-4"><img  src="{% static '/img/13.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp1-5"><img  src="{% static '/img/14.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp1-6"><img  src="{% static '/img/15.png' %}" alt="done" style="width:500px"></li>
+    <li  id="tp1-7"><img  src="{% static '/img/16.png' %}" alt="done" style="width:500px"></li>
+  </ul>
 
-<h3>Text bubble area</h3>
-<img src
+</div>
+
 {% endblock sidebar %}

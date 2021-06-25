@@ -85,7 +85,7 @@ a.article-title:hover {
 .fill{
   /*background-image: url("/static/img/100percent.PNG");*/
   position: relative;
-  height: 40px;
+  height: 35px;
   width: 75px;
   cursor: pointer;
 }
@@ -99,19 +99,76 @@ a.article-title:hover {
   background-image: url("/static/img/25percent.PNG");
 }
 
+#tp0-1{
+  display: none;
+}
+
+#tp0-2{
+  display: none;
+}
+
+#tp0-3{
+  display: none;
+}
+
+#tp0-4{
+  display: none;
+}
+#tp0-5{
+  display: none;
+}
+
+#tp1-1{
+  display: none;
+}
+#tp1-2{
+  display: none;
+}
+#tp1-3{
+  display: none;
+}
+#tp1-4{
+  display: none;
+}
+#tp1-5{
+  display: none;
+}
+#tp1-6{
+  display: none;
+}
+#tp1-7{
+  display: none;
+}
+
 .bar1{
-  background-image: url("/static/img/bar1.PNG");
+  background-image: url("/static/img/green box.PNG");
   position: relative;
-  height: 100px;
-  width: 340px;
+  height: 80px;
+  width: 220px;
+  cursor: pointer; 
+}
+
+.redbar1{
+  display: inline-block;
+  background-image: url("/static/img/red_bar.PNG");
+  height: 110px;
+  width: auto;
+  cursor: pointer; 
+}
+
+.bluebar1{
+  display: inline-block;
+  background-image: url("/static/img/blue_bar.PNG");
+  height: 110px;
+  width: auto;
   cursor: pointer; 
 }
 
 .bar2{
   background-image: url("/static/img/bar2.PNG");
   position: relative;
-  height: 90px;
-  width: 250px;
+  height: 80px;
+  width: 180px;
   cursor: pointer; 
 }
 
@@ -121,6 +178,19 @@ a.article-title:hover {
   height:auto;
   cursor: pointer; 
 }
+
+#ship-deck{
+  display: none;
+}
+
+#bar-model{
+  display: none;
+}
+
+#percent{
+  display: none;
+}
+
 .hold {
   border: solid 5px #ccc;
 }
@@ -128,7 +198,7 @@ a.article-title:hover {
 .empty {
   display: inline-block;
   height: 50px;
-  width: 120px;
+  width: 85px;
   margin: 10px;
   border: solid 3px salmon;
   background: white;
@@ -155,4 +225,32 @@ div.student-main
 height:900px;
 overflow:scroll;
 float: left;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.column1 {
+  float: left;
+  width: 10%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.green_text{
+  padding: 5px;
+  border: solid 3px green;
+  border-style: dashed;
+  outline: none;
+  height: 50px;
+  width: 100px;
 }
