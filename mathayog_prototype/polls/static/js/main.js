@@ -2,6 +2,8 @@ const fill = document.querySelectorAll('.fill');
 const empties = document.querySelectorAll('.empty');
 
 var state;
+var wrongDeck;
+var wrongSail;
 // Fill listeners
 for (const fil of fill){
 
@@ -110,6 +112,20 @@ $("#area2").on("click", function(e){
   }
 });
 
+$("#area3").on("click", function(e){
+  e.preventDefault();
+  console.log('invalid area clicked');
+
+  if (state == 0) {
+    //incorrect
+    $("#tp1-3").slideDown("slow");
+
+  }
+  else if(state == 1){
+    $("#tp1-6").slideDown("slow");
+  }
+});
+
 var one_correct = false;
 var one_wrong = false;
 
@@ -118,10 +134,20 @@ $("#sail-input").on('blur', function (e) {
             // correct lahat
             console.log("Show response");
             $('#tp1-9').slideDown("slow");
+
+            console.log("to percent stage")
+            setTimeout(function() {
+              $('#percent1').slideDown("slow");
+              $('#percent2').slideDown("slow");
+              $('#percent3').slideDown("slow");
+              $('#sail-deck-mini').slideUp("slow");
+            }, 3000);
             // disable input feiolds
             //this.prop('disabled', true);
             this.disabled = true;
             $('#deck-input').prop('disabled', true);
+
+
         }
         else if (this.value=="sail" && !one_correct){
             one_correct = true;
@@ -139,6 +165,15 @@ $("#deck-input").on('blur', function (e) {
         if(this.value=="deck" && one_correct){
             console.log("Show response");
             $('#tp1-9').slideDown("slow");
+
+            console.log("to percent stage")
+            setTimeout(function() {
+              $('#percent1').slideDown("slow");
+              $('#percent2').slideDown("slow");
+              $('#percent3').slideDown("slow");
+              $('#sail-deck-mini').slideUp("slow");
+            }, 3000);
+
             // disable input feiolds
             this.disabled = true;
             $('#deck-input').prop('disabled', true);

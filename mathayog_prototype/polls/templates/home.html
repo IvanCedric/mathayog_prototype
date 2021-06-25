@@ -13,6 +13,8 @@
       At what approximate speed does the wind blow into a kite sail when a wind speed of
       24 km/h is measured on the deck of the ship?
     </h3>
+    <br>
+      <br>
     {% load static %}
     <!-- <img src="{% static '/img/skysails.png' %}" alt="Ship with a skysail"> -->
     <div  id="read">
@@ -24,12 +26,70 @@
     <map name="myMap" id="myMap">
       <area id="area1" shape="poly" coords="110,153,49,208,259,283,342,271,324,227" href="">
       <area id="area2" shape="poly" coords="465,31,506,0,561,50" href="">
+      <area id="area3" shape="rect" coords="0,0,400,100" href="">
      </map>
     <img src="{% static '/img/4.png' %}" alt="done" style="width:600px" usemap="#myMap">
   </div>
   <div  id="bar-model">
 
-    <div id="percent">
+    <!--bar model for sail-->
+    <div id="sail-deck" class="row bg-white text-dark">
+      <div id="sail-deck-mini" style="padding-left: 30px">
+        <h3>Step 2:</h3>
+        <h4 style="padding-left: 30px">Which one has a higher wind speed? Label the bars by typing 'sail' or 'deck' in the green answer boxes.</h4>
+      </div>
+      <div class="column1">
+        <h3 align="right" style="padding-top:30px;">wind speed at</h3>
+      </div>
+      <div class="column2">
+          <form action="" method="get">
+            <br/>
+            <input id="sail-input" class="green_text" type="text" name="sail-input" value="" maxlength="100" />
+            <br />
+          </form>
+      </div>
+      <div class="column">
+        <div class="redbar1" draggable="false" style="width:270px"></div>
+      </div>
+    </div>
+
+    <div id="percent2" class="row">
+      <div class="column" style="width:47%">
+      </div>
+      <div class="column">
+        <div class="empty"></div>
+        <div class="empty"></div>
+      </div>
+    </div>
+
+
+    <!--bar model for deck-->
+    <div id="sail-deck" class="row bg-white text-dark">
+      <div class="column1">
+        <h3 align="right" style="padding-top:30px;">wind speed at</h3>
+      </div>
+      <div class="column2">
+          <form action="" method="get">
+            <br/>
+            <input id="deck-input" class="green_text" type="text" name="deck-input" value="" maxlength="100" />
+            <br />
+          </form>
+      </div>
+      <div class="column">
+        <div class="bluebar1" draggable="false" style="width:210px"></div>
+      </div>
+    </div>
+
+    
+    <div id="percent3" class="row">
+      <div class="column" style="width: 46.5%">
+      </div>
+      <div class="column">
+        <div class="empty" style="border-color:blue"></div>
+      </div>
+    </div>
+
+    <div id="percent1">
       <h4>Drag the percentages below to match the corresponding brackets</h4>
       <div class="empty">
         <div  class="fill" id = "d3" draggable="true"></div>
@@ -42,56 +102,6 @@
       </div>
     </div>
 
-    <!--bar model for sail-->
-    <div id="sail-deck" class="row bg-white text-dark">
-      <div class="column1">
-      </div>
-      <div class="column">
-          <form action="" method="get">
-            <br/>
-            <input id="sail-input" class="green_text" type="text" name="sail-input" value="" maxlength="100" />
-            <br />
-          </form>
-      </div>
-      <div class="column">
-        <div class="redbar1" draggable="false" style="width:270px"></div>
-      </div>
-    </div>
-
-    <div id="percent" class="row">
-      <div class="column">
-      </div>
-      <div class="column">
-        <div class="empty"></div>
-        <div class="empty"></div>
-      </div>
-    </div>
-
-
-    <!--bar model for deck-->
-    <div id="sail-deck" class="row bg-white text-dark">
-      <div class="column1">
-      </div>
-      <div class="column">
-          <form action="" method="get">
-            <br/>
-            <input id="deck-input" class="green_text" type="text" name="deck-input" value="" maxlength="100" />
-            <br />
-          </form>
-      </div>
-      <div class="column">
-        <div class="bluebar1" draggable="false" style="width:270px"></div>
-      </div>
-    </div>
-
-    
-    <div id="percent" class="row">
-      <div class="column">
-      </div>
-      <div class="column">
-        <div class="empty"></div>
-      </div>
-    </div>
 
 
   </div>
