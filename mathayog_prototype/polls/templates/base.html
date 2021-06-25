@@ -25,7 +25,9 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="/">Mathayog</a>
+          <a class="navbar-brand mr-4" href="{% url 'index' %}">
+              <img src= "{% static '/img/mathayog-icon-v2.png' %}" alt="MATHayog logo" style="width:124px;height:48px;">
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
