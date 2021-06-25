@@ -85,17 +85,75 @@ $("#area2").on("click", function(e){
     $("#tp1-7").slideDown("slow");
     setTimeout(function() {
       $('#tutor-response-main').animate({width:'toggle'},350);
+      $('#tutor-response-main').slideDown("slow");
       $("#bar-model").slideDown("slow");
       $("#ship-deck").slideUp("slow");
       $("#done1").slideUp("slow");
+      $('#tp1-1').slideUp("slow");
+      $('#tp1-2').slideUp("slow");
       $('#tp1-3').slideUp("slow");
       $('#tp1-4').slideUp("slow");
       $('#tp1-5').slideUp("slow");
       $('#tp1-6').slideUp("slow");
       $('#tp1-7').slideUp("slow");
+      $('#tp0-1').slideUp("slow");
+      $('#tp0-2').slideUp("slow");
+      $('#tp0-3').slideUp("slow");
+      $('#tp0-5').slideUp("slow");
     }, 2000);
+    setTimeout(function() {
+      $('#tp1-10').slideDown("slow");
+    }, 3000);
+    setTimeout(function() {
+      $('#tp1-11').slideDown("slow");
+    }, 6000);
   }
 });
+
+var one_correct = false;
+var one_wrong = false;
+
+$("#sail-input").on('blur', function (e) {
+        if(this.value=="sail" && one_correct){
+            // correct lahat
+            console.log("Show response");
+            $('#tp1-9').slideDown("slow");
+            // disable input feiolds
+            //this.prop('disabled', true);
+            this.disabled = true;
+            $('#deck-input').prop('disabled', true);
+        }
+        else if (this.value=="sail" && !one_correct){
+            one_correct = true;
+            console.log("Correct answer");
+        }
+        else {
+            if (!one_wrong){ $('#tp1-8').slideDown("slow");  }
+            else {one_wrong=true}
+            $('#deck-input').val('');
+            this.value = '';
+         }
+    });
+
+$("#deck-input").on('blur', function (e) {
+        if(this.value=="deck" && one_correct){
+            console.log("Show response");
+            $('#tp1-9').slideDown("slow");
+            // disable input feiolds
+            this.disabled = true;
+            $('#deck-input').prop('disabled', true);
+        }
+        else if (this.value=="deck" && !one_correct){
+            one_correct = true;
+            console.log("Correct answer");
+        }
+        else {
+            if (!one_wrong){ $('#tp1-8').slideDown("slow");  }
+            else {one_wrong=true}
+            $('#deck-input').val('');
+            this.value = '';
+         }
+    });
 
 // Student after finishing prelimary read of question
 $(document).ready(function(){
@@ -122,7 +180,6 @@ $(document).ready(function(){
     }, 5500);
 
 
-
   
   });
 });
@@ -139,6 +196,7 @@ $(document).ready(function(){
   setTimeout(function() {
       console.log('third teacher prompt');
       $("#tp0-3").slideDown("slow");
-      }, 6000); 
-  
+      }, 6000);
+
   });
+
